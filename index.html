@@ -4,8 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>투두리스트</title>
+    <style>
+      div {
+        text-align: center;
+      }
+      .tasklist li.complete{ 
+        text-decoration: line-through;
+        color :black;
+      }
+      .tasklist li {
+        padding : 10px;
+      }
+      
+      ul{
+   list-style:none;
+   }
+    </style>
   </head>
   <body>
-    <script></script>
+    <div id = "addtodolist">
+    <h2>To do List</h2>
+    <label for="task-input">할일  : </label>
+    <input type="text" id="task-input" />
+    <button id="btnAdd">추가</button>
+    </div>
+    <div>
+    <p><h3>할 일 목록</h3></p>
+    <ul class = "tasklist">
+   
+    </ul>
+</div>
+
+<script src="main.js"></script>
   </body>
 </html>
