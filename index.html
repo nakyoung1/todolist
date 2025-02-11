@@ -5,17 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>투두리스트</title>
     <style>
-      div {
-        text-align: center;
-      }
+      
       .tasklist li.complete{ 
         text-decoration: line-through;
         color :black;
       }
       .tasklist li {
-        padding : 10px;
+        margin: 10px;
       }
-      
+   
       ul{
    list-style:none;
    }
@@ -26,6 +24,8 @@
     <h2>To do List</h2>
     <label for="task-input">할일  : </label>
     <input type="text" id="task-input" />
+    <label for = "date-input">마감기한</label>
+    <input type="date" id="date-input" />
     <button id="btnAdd">추가</button>
     </div>
     <div>
