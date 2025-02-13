@@ -6,7 +6,7 @@ const taskInput = document.getElementById("task-input");
 const dateInput = document.getElementById("date-input");
 const btnAdd = document.getElementById("btnAdd");
 const taskList = document.querySelector(".tasklist");
-const categoryInput = document.getElementById("category");
+const category = document.getElementById("category");
 
 //추가 버튼을 클릭했을 때
 btnAdd.addEventListener("click", () => {
