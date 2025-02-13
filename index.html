@@ -18,8 +18,12 @@
   <body>
     <div id = "addtodolist">
     <h2>To do List</h2>
+    <div id ="nowtime">
+    <span id="time"></span>
+  </div>
+    <div id = "todolist-container">
     <label for="task-input">할일  : </label>
-    <input type="text" id="task-input" />
+    <input type="text" id="task-input" placeholder="추가 할 일을 입력해주세요."/>
     <label for = "date-input">마감기한</label>
     <input type="date" id="date-input" />
     <label for="category">카테고리 선택:</label>
@@ -31,7 +35,7 @@
         </select>
     <button id="btnAdd">추가</button>
     </div>
-    <div>
+    <div id = "tasklist-container">
     <p><h3>할 일 목록</h3></p>
     <ul class = "tasklist">
     </ul>
