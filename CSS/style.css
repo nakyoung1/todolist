@@ -1,0 +1,215 @@
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+h2 {
+  font-weight: 600;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+  font-size: 50px;
+}
+::placeholder {
+  color: gray;
+  font-style: italic;
+  text-align: center;
+  font-size: 15px;
+}
+button {
+  text-align: center;
+  padding: 3px;
+}
+#todolist-container {
+  margin: 10px auto;
+  padding: 10px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+}
+#todolist-container p {
+  background-color: skyblue;
+  border-radius: 5px;
+  border: 1px solid gray;
+  margin: 10px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#tasks label {
+  margin-bottom: 15px;
+}
+#tasks input {
+  padding: 10px;
+  width: 50vw;
+}
+
+#dates label {
+  margin-bottom: 15px;
+}
+#dates input {
+  padding: 10px;
+  width: 50vw;
+}
+
+#categoryes label {
+  margin-bottom: 15px;
+}
+#categoryes select {
+  padding: 10px;
+  width: 50vw;
+}
+#btnAdd {
+  border: 1px solid gray;
+  background-color: skyblue;
+  border-radius: 3px;
+  margin: 10px auto;
+
+  padding: 10px;
+  width: 20%;
+  font-size: 15px;
+}
+#btnAdd:hover {
+  background-color: rgb(53, 176, 224);
+}
+
+#tasklist-container {
+  border: 1px solid gray;
+  background-color: skyblue;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+#tasklist-container h3 {
+  text-align: center;
+  margin-top: 20px;
+}
+ul {
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+}
+li {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.checkbox {
+  margin: 10px;
+}
+.content {
+  margin: 10px;
+  width: 200px;
+  word-wrap: break-word;
+}
+.datetext {
+  position: absolute;
+  right: 20px;
+}
+li .li3 {
+  margin-top: 10px;
+}
+.categorytext {
+  position: absolute;
+  left: 30px;
+}
+
+.editbtn {
+  border: 1px solid gray;
+  background-color: pink;
+  border-radius: 3px;
+  padding: 5px;
+  position: absolute;
+  right: 85px;
+}
+.editbtn:hover {
+  background-color: rgb(233, 95, 118);
+}
+.delbtn {
+  border: 1px solid gray;
+  background-color: beige;
+  border-radius: 3px;
+  padding: 5px;
+  position: absolute;
+  right: 20px;
+}
+.delbtn:hover {
+  background-color: rgb(80, 80, 80);
+  color: white;
+}
+/* 다이얼로그 스타일 */
+dialog {
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 다이얼로그 입력 필드 스타일 */
+dialog input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 다이얼로그 버튼 컨테이너 */
+.dialog-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* 버튼 사이 간격 */
+  margin-top: 15px;
+}
+
+/* 다이얼로그 버튼 스타일 */
+dialog button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#confirmBtn {
+  background-color: #28a745;
+  color: white;
+}
+
+#confirmBtn:hover {
+  background-color: #218838;
+}
+
+#cancelBtn {
+  background-color: #dc3545;
+  color: white;
+}
+
+#cancelBtn:hover {
+  background-color: #c82333;
+}

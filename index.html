@@ -4,45 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>투두리스트</title>
-    <style>
-     
-      .tasklist li {
-        margin: 10px;
-      }
-   
-      ul{
-   list-style:none;
-   }
-    </style>
+    <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
-    <div id = "addtodolist">
     <h2>To do List</h2>
-    <label for="task-input">할일  : </label>
-    <input type="text" id="task-input" />
-    <label for = "date-input">마감기한</label>
-    <input type="date" id="date-input" />
-    <label for="category">카테고리 선택:</label>
-        <select id="category">
-            <option value="업무">업무</option>
-            <option value="공부">공부</option>
-            <option value="개인">개인</option>
-            <option value="기타">기타</option>
-        </select>
-    <button id="btnAdd">추가</button>
-    </div>
-    <div>
-    <p><h3>할 일 목록</h3></p>
-    <ul class = "tasklist">
-    </ul>
-    <dialog>
-     <input type="text" id = "edit-text"/>
-      <input type="date" id="edit-date" />
-      <button id = "confirmBtn">완료</button>
-      <button id = "cancelBtn">취소</button>
-    </dialog>
-</div>
 
-<script src="main.js"></script>
+    <div id="todolist-container">
+      <p id="tasks">
+        <label for="task-input">할 일 : </label>
+        <input type="text" id="task-input" placeholder=" 추가 할 일을 입력해주세요." />
+      </p>
+      <p id="dates">
+        <label for="date-input">마감기한 :</label>
+        <input type="date" id="date-input" style="text-align: center" />
+      </p>
+      <p id="categoryes">
+        <label for="category">카테고리 선택 :</label>
+        <select id="category" style="text-align: center">
+          <option value="업무">업무</option>
+          <option value="공부">공부</option>
+          <option value="개인">개인</option>
+          <option value="기타">기타</option>
+        </select>
+      </p>
+      <button id="btnAdd">추가</button>
+    </div>
+
+    <div id="tasklist-container">
+      <h3>할 일 목록</h3>
+      <ul class="tasklist"></ul>
+
+      <dialog>
+        <input type="text" id="edit-text" placeholder="수정할 일을 입력하세요" />
+        <input type="date" id="edit-date" style="text-align: center" />
+        <p>
+          <button id="confirmBtn">완료</button>
+          <button id="cancelBtn">취소</button>
+        </p>
+      </dialog>
+    </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
