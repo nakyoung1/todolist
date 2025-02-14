@@ -130,7 +130,7 @@ function openEditDialog(id, content, dateText, categoryText) {
     saveTasks();
     content.innerHTML = ` ${task.todo} `;
     dateText.innerHTML = `${task.date ? `마감기한 : ${task.date}` : ""}`;
-    categoryText.innerHTML = `카테고리 : ${categoryInput}`;
+    categoryText.innerHTML = `카테고리 : ${task.category}`;
 
     dialog.close();
   };
