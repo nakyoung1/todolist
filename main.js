@@ -112,7 +112,7 @@ btnAdd.addEventListener("click", () => {
   dateInput.value = "";
 });
 
-function openEditDialog(id, content, dateText, categoryText) {
+function openEditDialog(id, content, dateText) {
   const dialog = document.querySelector("dialog");
   const editText = document.getElementById("edit-text");
   const editDate = document.getElementById("edit-date");
@@ -130,7 +130,7 @@ function openEditDialog(id, content, dateText, categoryText) {
     saveTasks();
     content.innerHTML = ` ${task.todo} `;
     dateText.innerHTML = `${task.date ? `마감기한 : ${task.date}` : ""}`;
-    categoryText.innerHTML = `카테고리 : ${task.category}`;
+    categoryText.innerHTML = `카테고리 : ${categoryInput}`;
 
     dialog.close();
   };
