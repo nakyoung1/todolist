@@ -112,7 +112,7 @@ btnAdd.addEventListener("click", () => {
   dateInput.value = "";
 });
 
-function openEditDialog(id, content, dateText, categoryText) {
+function openEditDialog(id, content, dateText) {
   const dialog = document.querySelector("dialog");
   const editText = document.getElementById("edit-text");
   const editDate = document.getElementById("edit-date");
