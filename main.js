@@ -66,9 +66,9 @@ function makeTag({ id, todo, date, category, completed }) {
     content.style.textDecoration = checkBox.checked ? "line-through" : "none";
   });
 
-  //수정 버튼 클릭 시 할일 / 마감기한 수정
+  //수정 버튼 클릭 시 할일 / 마감기한 수정s
   editBtn.onclick = () => {
-    openEditDialog(id, content, dateText, categoryText);
+    openEditDialog(id, content, dateText);
   };
 
   delBtn.onclick = () => {
@@ -119,6 +119,9 @@ function openEditDialog(id, content, dateText) {
   const confirmBtn = document.getElementById("confirmBtn");
   const cancelBtn = document.getElementById("cancelBtn");
 
+  editText.value = "";
+  editDate.value = "";
+
   const task = tasks.find((item) => item.id === id);
   editText.value = task.todo;
   editDate.value = task.date;
@@ -130,12 +133,10 @@ function openEditDialog(id, content, dateText) {
     saveTasks();
     content.innerHTML = ` ${task.todo} `;
     dateText.innerHTML = `${task.date ? `마감기한 : ${task.date}` : ""}`;
-    categoryText.innerHTML = `카테고리 : ${categoryInput}`;
+    categoryText.innerHTML = `카테고리 : ${task.category}`;
 
     dialog.close();
   };
-  editText.value = "";
-  editDate.value = "";
 
   cancelBtn.onclick = () => {
     dialog.close();
