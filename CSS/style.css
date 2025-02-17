@@ -104,10 +104,9 @@ button {
 }
 
 ul {
-  overflow: hidden;
-  position: relative;
   list-style: none;
   margin: 0 auto;
+  height: auto;
 }
 
 .listoftodo {
@@ -117,13 +116,27 @@ ul {
   border-radius: 5px;
   margin: 15px auto;
   list-style: none;
-  min-height: 12vh;
-  height: auto;
-  white-space: normal;
 }
-.listoftodo #li2 {
-  height: auto;
-  white-space: normal;
+
+.div2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.categorytext {
+  margin: 2px;
+}
+.datetext {
+  margin: 2px;
+}
+
+.listoftodo .li3 {
+  display: flex;
+  justify-content: flex-end;
+}
+.listoftodo div button {
+  margin: 2px;
 }
 
 .checkbox {
@@ -134,16 +147,8 @@ ul {
   width: 200px;
   word-wrap: break-word;
 }
-.datetext {
-  position: absolute;
-  right: 20px;
-}
-li .li3 {
+.dialog-buttons li p {
   margin-top: 10px;
-}
-.categorytext {
-  position: absolute;
-  left: 30px;
 }
 
 .editbtn {
@@ -151,8 +156,6 @@ li .li3 {
   background-color: pink;
   border-radius: 3px;
   padding: 5px;
-  position: absolute;
-  right: 85px;
 }
 .editbtn:hover {
   background-color: rgb(233, 95, 118);
@@ -162,8 +165,6 @@ li .li3 {
   background-color: beige;
   border-radius: 3px;
   padding: 5px;
-  position: absolute;
-  right: 20px;
 }
 .delbtn:hover {
   background-color: rgb(80, 80, 80);

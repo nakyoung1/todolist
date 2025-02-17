@@ -28,7 +28,7 @@ function makeTag({ id, todo, date, category, completed }) {
   li.id = id;
   li.className = "listoftodo";
 
-  const li2 = document.createElement("li");
+  const li2 = document.createElement("div");
   li2.className = "li2";
   //체크박스 생성
   const checkBox = document.createElement("input");
@@ -39,8 +39,12 @@ function makeTag({ id, todo, date, category, completed }) {
   const content = document.createElement("span");
   content.className = "content";
 
-  const li3 = document.createElement("li");
+  const div2 = document.createElement("div");
+  div2.className = "div2";
+
+  const li3 = document.createElement("div");
   li3.className = "li3";
+
   const dateText = document.createElement("span");
   dateText.className = "datetext";
 
@@ -80,13 +84,15 @@ function makeTag({ id, todo, date, category, completed }) {
   //요소를 li에 추가
   li2.appendChild(checkBox);
   li2.appendChild(content);
-  li2.appendChild(dateText);
 
-  li3.appendChild(categoryText);
+  div2.appendChild(categoryText);
+  div2.appendChild(dateText);
+
   li3.appendChild(editBtn);
   li3.appendChild(delBtn);
 
   li.appendChild(li2);
+  li.appendChild(div2);
   li.appendChild(li3);
 
   //ul인 taskList에 li추가
