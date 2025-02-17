@@ -26,8 +26,10 @@ function makeTag({ id, todo, date, category, completed }) {
   // li 생성
   const li = document.createElement("li");
   li.id = id;
+  li.className = "listoftodo";
 
   const li2 = document.createElement("li");
+  li2.className = "li2";
   //체크박스 생성
   const checkBox = document.createElement("input");
   checkBox.type = "checkbox";
@@ -38,7 +40,7 @@ function makeTag({ id, todo, date, category, completed }) {
   content.className = "content";
 
   const li3 = document.createElement("li");
-
+  li3.className = "li3";
   const dateText = document.createElement("span");
   dateText.className = "datetext";
 
@@ -54,7 +56,7 @@ function makeTag({ id, todo, date, category, completed }) {
   delBtn.textContent = "delete";
 
   content.innerHTML = ` ${todo} `;
-  dateText.innerHTML = `${date ? `마감기한 : ${date}` : ""}`;
+  dateText.innerHTML = `${date ? `${date}` : ""}`;
   categoryText.innerHTML = `카테고리 : ${category}`;
   //체크박스에 체크 시 선 추가
   checkBox.addEventListener("change", () => {
@@ -66,9 +68,9 @@ function makeTag({ id, todo, date, category, completed }) {
     content.style.textDecoration = checkBox.checked ? "line-through" : "none";
   });
 
-  //수정 버튼 클릭 시 할일 / 마감기한 수정s
+  //수정 버튼 클릭 시 할일 / 마감기한 수정
   editBtn.onclick = () => {
-    openEditDialog(id, content, dateText);
+    openEditDialog(id, content, dateText, categoryText);
   };
 
   delBtn.onclick = () => {
@@ -112,15 +114,12 @@ btnAdd.addEventListener("click", () => {
   dateInput.value = "";
 });
 
-function openEditDialog(id, content, dateText) {
+function openEditDialog(id, content, dateText, categoryText) {
   const dialog = document.querySelector("dialog");
   const editText = document.getElementById("edit-text");
   const editDate = document.getElementById("edit-date");
   const confirmBtn = document.getElementById("confirmBtn");
   const cancelBtn = document.getElementById("cancelBtn");
-
-  editText.value = "";
-  editDate.value = "";
 
   const task = tasks.find((item) => item.id === id);
   editText.value = task.todo;
@@ -137,6 +136,8 @@ function openEditDialog(id, content, dateText) {
 
     dialog.close();
   };
+  editText.value = "";
+  editDate.value = "";
 
   cancelBtn.onclick = () => {
     dialog.close();
