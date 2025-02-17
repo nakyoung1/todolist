@@ -39,6 +39,7 @@ function makeTag({ id, todo, date, category, completed }) {
   const content = document.createElement("span");
   content.className = "content";
 
+  //날짜 +카테고리
   const div2 = document.createElement("div");
   div2.className = "div2";
 
