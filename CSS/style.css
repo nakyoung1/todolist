@@ -16,10 +16,7 @@
 }
 body {
   height: 100%;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
+  width: 500px;
 }
 h2 {
   font-weight: 600;
@@ -39,12 +36,12 @@ button {
   padding: 3px;
 }
 #todolist-container {
+  background-color: white;
   margin: 10px auto;
   padding: 10px;
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 80%;
 }
 #todolist-container p {
   background-color: skyblue;
@@ -53,69 +50,80 @@ button {
   margin: 10px auto;
   padding: 10px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 100%;
+  text-align: center;
 }
-#tasks label {
-  margin-bottom: 15px;
-}
-#tasks input {
-  padding: 10px;
-  width: 50vw;
-}
-
-#dates label {
-  margin-bottom: 15px;
-}
-#dates input {
-  padding: 10px;
-  width: 50vw;
+#todolist-container label {
+  height: 30px;
+  width: 130px;
+  margin: 0 auto;
 }
 
-#categoryes label {
-  margin-bottom: 15px;
+#todolist-container p input {
+  padding: 10px;
+  width: 400px;
 }
+#todolist-container p select {
+  padding: 10px;
+  width: 400px;
+}
+
 #categoryes select {
   padding: 10px;
   width: 50vw;
 }
 #btnAdd {
   border: 1px solid gray;
-  background-color: skyblue;
+  background-color: rgb(135, 206, 235);
   border-radius: 3px;
-  margin: 10px auto;
-
-  padding: 10px;
-  width: 20%;
-  font-size: 15px;
-}
-#btnAdd:hover {
-  background-color: rgb(53, 176, 224);
-}
-
-#tasklist-container {
-  border: 1px solid gray;
-  background-color: skyblue;
-  border-radius: 5px;
   margin: 10px auto;
   padding: 10px;
   width: 100%;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#btnAdd:hover {
+  background-color: rgb(255, 255, 255);
+  color: skyblue;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#tasklist-container {
+  background-color: white;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 80%;
   overflow: hidden;
 }
-#tasklist-container h3 {
-  text-align: center;
-  margin-top: 20px;
+#tasklist-container:has(.tasklist:empty) {
+  display: none;
 }
+
 ul {
   overflow: hidden;
   position: relative;
-  padding: 10px;
+  list-style: none;
+  margin: 0 auto;
 }
-li {
-  margin-bottom: 15px;
-  position: relative;
+
+.listoftodo {
+  padding: 10px;
+  background-color: rgba(135, 206, 235, 0.4);
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  margin: 15px auto;
+  list-style: none;
+  min-height: 12vh;
+  height: auto;
+  white-space: normal;
+}
+.listoftodo #li2 {
+  height: auto;
+  white-space: normal;
 }
 
 .checkbox {
@@ -161,16 +169,15 @@ li .li3 {
   background-color: rgb(80, 80, 80);
   color: white;
 }
-/* 다이얼로그 스타일 */
+
 dialog {
   padding: 20px;
   border: none;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  text-align: center; /* 텍스트 중앙 정렬 */
+  text-align: center;
 }
 
-/* 다이얼로그 입력 필드 스타일 */
 dialog input {
   width: 100%;
   padding: 8px;
@@ -179,15 +186,13 @@ dialog input {
   border-radius: 4px;
 }
 
-/* 다이얼로그 버튼 컨테이너 */
 .dialog-buttons {
   display: flex;
   justify-content: center;
-  gap: 10px; /* 버튼 사이 간격 */
+  gap: 10px;
   margin-top: 15px;
 }
 
-/* 다이얼로그 버튼 스타일 */
 dialog button {
   padding: 8px 15px;
   border: none;
